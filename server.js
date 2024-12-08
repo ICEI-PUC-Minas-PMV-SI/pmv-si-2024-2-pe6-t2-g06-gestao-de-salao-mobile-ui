@@ -26,8 +26,8 @@ const app = express();
 app.use(express.json());
 const port = 5001;
 
-const accountSid = 'AC3599b5545907e1b9f39d0623dccc6099';
-const authToken = 'b1f18a70368d5b4f11e2a9a7d1ac8df6';
+// const accountSid = 'AC3599b5545907e1b9f39d0623dccc6099';
+// const authToken = 'b1f18a70368d5b4f11e2a9a7d1ac8df6';
 const client = twilio(accountSid, authToken);
 
 // Habilita CORS para todas as origens
