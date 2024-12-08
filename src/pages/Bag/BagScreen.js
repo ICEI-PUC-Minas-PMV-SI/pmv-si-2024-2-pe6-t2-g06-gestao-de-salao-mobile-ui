@@ -63,7 +63,6 @@ const SERVICOS_SUB_CATEGORIA = [
   ];
   
   const BagScreen = ({ route }) => {
-    // const { bagItems, setBagItems } = useContext(BagContext);
     const { bagItems, setBagItems } = route.params;
     const navigation = useNavigation();
 
@@ -82,10 +81,6 @@ const SERVICOS_SUB_CATEGORIA = [
             return updatedItems;
         });
     };
-
-    // useEffect(() => {
-    //     console.log('Itens da sacola:', safeBagItems); // Apenas para debug
-    // }, [safeBagItems]);
 
     const sendWhatsAppNotification = async () => {
         const backendUrl = 'http://192.168.2.21:5001/send-whatsapp';
@@ -407,6 +402,5 @@ const styles = StyleSheet.create({
     },
     modalButtons: { flexDirection: 'row', justifyContent: 'space-between' },
   });
-  
 
 export default BagScreen;

@@ -230,7 +230,7 @@ const HomeScreenPage = () => {
   const navigation = useNavigation();
 
   const [search, setSearch] = useState('');
-  const [selectedServico, setSelectedServico] = useState('1'); // Default to "Todos"
+  const [selectedServico, setSelectedServico] = useState('1'); // Default: "Todos"
 
   const filteredSaloes = SALOES.filter((salao) => {
     const matchesServico = selectedServico === '1' || salao.serviceId === selectedServico;

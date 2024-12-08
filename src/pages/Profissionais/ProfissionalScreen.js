@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, FlatList, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 import axios from 'axios';
-import Icon from 'react-native-vector-icons/MaterialIcons'; // Importando o ícone
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Calendar } from 'react-native-calendars'; 
 import { useNavigation } from '@react-navigation/native';
 
@@ -491,7 +491,7 @@ const PROFISSIONAIS_POR_SALAO = [
   
     useEffect(() => {
       if (!selectedDate) {
-        const today = new Date().toISOString().split('T')[0]; // Formata a data para 'YYYY-MM-DD'
+        const today = new Date().toISOString().split('T')[0]; // Formata a data para 'DD-MM-YYYY'
         setSelectedDate(today);
         return;
       }
@@ -691,14 +691,14 @@ const PROFISSIONAIS_POR_SALAO = [
       fontSize: 12,
     },
     text: {
-      color: '#fff', // Cor branca para o texto
-      fontSize: 16, // Tamanho do texto
+      color: '#fff', 
+      fontSize: 16, 
     },
     button: {
-      flexDirection: 'row', // Alinha o ícone e o texto na horizontal
-      alignItems: 'center', // Alinha verticalmente
+      flexDirection: 'row', 
+      alignItems: 'center',
       padding: 10,
-      backgroundColor: '#171710', // Exemplo de cor de fundo
+      backgroundColor: '#171710', 
       borderRadius: 5,
     },
     cartButton: { flexDirection: 'row', alignItems: 'center' },

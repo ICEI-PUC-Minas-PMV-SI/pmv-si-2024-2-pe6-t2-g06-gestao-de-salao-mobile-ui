@@ -5,23 +5,22 @@ import { routes } from '../navigation/RouteConfig';
 import { renderScene } from '../navigation/SceneConfig';
 
 const BottomNavigationDefault = () => {
-  const [index, setIndex] = useState(0); // Controla a aba selecionada
+  const [index, setIndex] = useState(0); 
 
   const renderIcon = ({ route }) => {
-    let iconColor = '#000';  // Default icon color
+    let iconColor = '#000';  
 
-    // Customize icon color based on the active route
     if (route.key === 'home') {
-      iconColor = '#B68D40';  // Color for Login icon
+      iconColor = '#B68D40'; 
     }
     if (route.key === 'login') {
-      iconColor = '#7f7f7f';  // Color for Login icon
+      iconColor = '#7f7f7f';  
     }
     if (route.key === 'logout') {
-      iconColor = '#FF6347';  // Color for Logout icon
+      iconColor = '#FF6347'; 
     }
     if (route.key === 'agenda') {
-      iconColor = '#B68D40';  // Color for Agenda icon
+      iconColor = '#B68D40'; 
     }
 
     return <MaterialCommunityIcons name={route.icon} size={24} color={iconColor} />;
@@ -33,7 +32,7 @@ const BottomNavigationDefault = () => {
       onIndexChange={setIndex}
       renderScene={renderScene}
       renderIcon={renderIcon}
-      style={{ backgroundColor: '#000' }} // Cor de fundo do BottomNavigation
+      style={{ backgroundColor: '#000' }} 
     />
   );
 };

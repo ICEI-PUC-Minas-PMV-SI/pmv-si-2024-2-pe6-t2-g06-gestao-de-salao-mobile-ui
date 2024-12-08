@@ -19,19 +19,19 @@ const styles = StyleSheet.create({
       elevation: 5,
     },
     primaryButton: {
-      backgroundColor: '#93876e', // Beige Rose for primary buttons
-      borderColor: '#cfa2a0', // Marsala as border highlight
+      backgroundColor: '#93876e', 
+      borderColor: '#cfa2a0', 
       borderWidth: 1,
     },
     secondaryButton: {
-      backgroundColor: '#93876e', // Seafoam Green for secondary actions
-      borderColor: '#cfa2a0', // Marsala for subtle contrast
+      backgroundColor: '#93876e', 
+      borderColor: '#cfa2a0', 
       borderWidth: 1,
     },
     buttonText: {
       fontSize: 16,
       fontWeight: 'bold',
-      color: '#fff', // Black for high-contrast text
+      color: '#fff', 
     },
   });
 

@@ -1,4 +1,3 @@
-// src/components/Input.js
 import React from 'react';
 import { TextInput, StyleSheet } from 'react-native';
 
@@ -10,7 +9,7 @@ const Input = ({ value, onChangeText, placeholder, secureTextEntry = false }) =>
       value={value}
       onChangeText={onChangeText}
       secureTextEntry={secureTextEntry}
-      placeholderTextColor="#dcb4b1" // Placeholder Gray
+      placeholderTextColor="#dcb4b1" 
     />
   );
 };
@@ -19,12 +18,12 @@ const styles = StyleSheet.create({
     input: {
       height: 50,
       width: '100%',
-      borderColor: '#cca78a', // Beige Rose for soft borders
+      borderColor: '#cca78a', 
       borderWidth: 1,
       borderRadius: 25,
       paddingLeft: 15,
       marginVertical: 10,
-      backgroundColor: '#eeeeee', // Ivory for background
+      backgroundColor: '#eeeeee',
       color: '#dcb4b1', 
       fontSize: 14,
     },

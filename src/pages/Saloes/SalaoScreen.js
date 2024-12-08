@@ -291,13 +291,12 @@ const SERVICOS_CATEGORIA = [
                     <Text style={styles.subcategoryTitle}>{subcategory.title}</Text>
                     <Text style={styles.subcategoryPrice}>R$ {price}</Text>
                 </View>
-                {/* Botão MAIS */}
                 <TouchableOpacity
                     style={styles.plusButton}
                     onPress={() => 
                         navigation.navigate('ProfissionalScreen', {
                             subcategoryId: subcategory.id,
-                            salaoId: salao.id, // Add salaoId here
+                            salaoId: salao.id, 
                         })
                     }
                 >
@@ -377,8 +376,8 @@ const styles = StyleSheet.create({
     categoryItem: {
         marginVertical: 5,
         backgroundColor: '#ecf1f2',
-        borderRadius: 10, // Bordas arredondadas
-        overflow: 'hidden', // Garante que o conteúdo respeite o radius
+        borderRadius: 10, 
+        overflow: 'hidden', 
     },
     categoryImage: {
         width: 50,
@@ -402,7 +401,7 @@ const styles = StyleSheet.create({
         marginRight: 10,
     },
     subcategoryTextContainer: {
-        flex: 1, // Faz o contêiner expandir para alinhar o botão à direita
+        flex: 1, 
         flexDirection: 'column',
         justifyContent: 'center',
     },
@@ -414,10 +413,10 @@ const styles = StyleSheet.create({
         color: 'gray',
     },
     plusButton: {
-        width: 30, // Tamanho da bolinha
-        height: 30, // Tamanho da bolinha
+        width: 30, 
+        height: 30, 
         backgroundColor: '#fad02c',
-        borderRadius: 15, // Metade da largura/altura para fazer a bolinha
+        borderRadius: 15,
         alignItems: 'center',
         justifyContent: 'center',
     },

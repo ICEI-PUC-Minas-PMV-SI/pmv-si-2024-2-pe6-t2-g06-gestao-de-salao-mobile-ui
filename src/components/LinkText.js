@@ -16,10 +16,10 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
   },
   linkEsqueceuSenha: {
-    color: '#20add0', // Azul claro
+    color: '#20add0', 
   },
   linkRegister: {
-    color: '#d85a60', // Vermelho suave
+    color: '#d85a60', 
   },
 });
 
