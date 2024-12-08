@@ -294,7 +294,12 @@ const SERVICOS_CATEGORIA = [
                 {/* Botão MAIS */}
                 <TouchableOpacity
                     style={styles.plusButton}
-                    onPress={() => navigation.navigate('ProfissionalScreen', { subcategoryId: subcategory.id })}
+                    onPress={() => 
+                        navigation.navigate('ProfissionalScreen', {
+                            subcategoryId: subcategory.id,
+                            salaoId: salao.id, // Add salaoId here
+                        })
+                    }
                 >
                     <Text style={styles.plusButtonText}>+</Text>
                 </TouchableOpacity>

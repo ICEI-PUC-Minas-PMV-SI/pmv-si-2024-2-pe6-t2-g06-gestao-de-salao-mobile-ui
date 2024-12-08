@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { registerRootComponent } from 'expo';
 import { NavigationContainer } from '@react-navigation/native';
-import { AuthProvider } from './src/navigation/AuthContext/AuthProvider';
-
-import Main from './src/navigation/Main';
+import { BagProvider } from './src/context/BagContext'; 
+import MainNavigation from './src/navigation/MainNavigation'; 
 
 const App = () => {
-  return(
-    <AuthProvider>
+  return (
+    <BagProvider>  
       <NavigationContainer>
-        <Main/>
+        <MainNavigation /> 
       </NavigationContainer>
-    </AuthProvider>
+    </BagProvider>
   );
 };
 

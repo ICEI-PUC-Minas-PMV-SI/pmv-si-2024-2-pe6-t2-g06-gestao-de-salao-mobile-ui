@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, StyleSheet, Button } from 'react-native';
 import { AgendamentoService } from '../../services/AgendamentoService';
+import { useNavigation } from '@react-navigation/native';
 
-const AgendamentosScreen = ({ navigation }) => {
+const AgendamentosScreen = () => {
+
+  const navigation = useNavigation();
+
   const [agendamentos, setAgendamentos] = useState([]);
 
   useEffect(() => {
@@ -15,6 +19,11 @@ const AgendamentosScreen = ({ navigation }) => {
     loadAgendamentos();
   }, []);
 
+  // Função para cancelar um agendamento (remover da lista)
+  const handleCancel = (id) => {
+    setAgendamentos(agendamentos.filter(agendamento => agendamento.id !== id));
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Agendamentos</Text>
@@ -26,6 +35,11 @@ const AgendamentosScreen = ({ navigation }) => {
             <Text>{item.cliente}</Text>
             <Text>{item.servico}</Text>
             <Text>{item.data}</Text>
+            {/* Botão de Cancelar em cada item */}
+            <Button
+              title="Cancelar"
+              onPress={() => handleCancel(item.id)} // Passa o id do item para cancelar
+            />
           </View>
         )}
       />
